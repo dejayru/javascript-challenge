@@ -8,3 +8,15 @@ var inputs = d3.selectAll('input');
 populateTable(tableData);
 inputs.on('change',handleChange);
 button.on('click',handleClick);
+
+function populateTable(data) {
+    tbody.html('');
+    data.forEach(obj => {
+        var row = tbody.append('tr');
+
+        Object.values(obj).forEach(val => {
+            var cell = row.append('td');
+            cell.text(val);
+        });
+    });
+};
