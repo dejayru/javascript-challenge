@@ -5,3 +5,6 @@ var button = d3.select('button');
 var inputs = d3.selectAll('input');
 
 // YOUR CODE HERE!
+populateTable(tableData);
+inputs.on('change',handleChange);
+button.on('click',handleClick);
