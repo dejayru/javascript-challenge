@@ -20,3 +20,9 @@ function populateTable(data) {
         });
     });
 };
+
+function handleClick() {
+    inputs.property('value','');
+    tableData = data;    
+    populateTable(tableData);
+};
