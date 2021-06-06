@@ -26,3 +26,11 @@ function handleClick() {
     tableData = data;    
     populateTable(tableData);
 };
+
+function handleChange() {
+    var key = d3.select(this).property('id');
+    var value = d3.select(this).property('value');
+
+    tableData = tableData.filter(obj => obj[key] == value);
+    populateTable(tableData);
+};
